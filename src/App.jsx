@@ -1,14 +1,21 @@
 import React from "react";
-import { Github, I4G, Logo, ProfilePic, Slack, Share } from "./assets";
+import { Github, I4G, Logo, Slack, Share, Profile } from "./assets";
 
 const App = () => {
   return (
     <div className="bg-zuriBg min-h-screen flex flex-col justify-start items-center gap-8 sm:gap-14 relative">
       {/* profile */}
       <div className="mt-16 w-full flex flex-col justify-center items-center gap-6">
-        <img src={ProfilePic} alt="" id="profile__img" />
-        <p className="font-bold text-zuriGray-900 text-xl font-default">
-          Annette Black
+        <div className="h-img w-img rounded-full overflow-hidden">
+
+        <img src={Profile} alt="" id="profile__img" className="max-w-full" />
+        </div>
+        <p
+          className="font-bold text-zuriGray-900 text-xl font-default"
+          title="twitter handle"
+          id="twitter"
+        >
+          @cornerstone_jsx
         </p>
         <noscript>
           <p id="slack">Ephraim Cornerstone</p>

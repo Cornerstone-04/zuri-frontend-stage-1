@@ -28,7 +28,8 @@ module.exports = {
       fontFamily: {
         default: ["Montserrat"],
       },
-      height: { box: "76px", boxSm: "76px" },
+      height: { box: "76px", boxSm: "76px", img: "88px" },
+      width: { box: "76px", boxSm: "76px", img: "88px" },
       borderWidth: { 1: "1px" },
       maxWidth: { custom: "1216px" },
     },
