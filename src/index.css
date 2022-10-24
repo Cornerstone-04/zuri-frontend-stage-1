@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 .btn {
-  @apply bg-zuriGray-200 h-boxSm sm:h-box py-6 px-8 flex justify-center items-center w-full max-w-6xl border-1 border-zuriGray-200 rounded-lg;
+  @apply bg-zuriGray-200 hover:bg-zuriGray-300 h-boxSm sm:h-box py-6 px-8 flex justify-center items-center w-full max-w-6xl border-1 border-zuriGray-200 rounded-lg transition-all ease-in-out;
 }
 
 .link__text {

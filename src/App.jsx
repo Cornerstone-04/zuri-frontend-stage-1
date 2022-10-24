@@ -1,5 +1,5 @@
 import React from "react";
-import { Github, ProfilePic, Slack } from "./assets";
+import { Github, I4G, Logo, ProfilePic, Slack } from "./assets";
 
 const App = () => {
   return (
@@ -16,74 +16,62 @@ const App = () => {
       </div>
 
       {/* link boxes */}
-      <div className="flex flex-col justify-center items-center gap-6 w-full px-4 sm:px-20 md:px-36">
-        <div className="btn">
-          <a
-            href="https://twitter.com/cornerstone_jsx"
-            rel="noreferrer"
-            target="_blank"
-            className="link__text"
-            id="twitter"
-          >
-            Twitter Link
-          </a>
-        </div>
+      <div className="flex flex-col justify-center items-center gap-6 w-full px-4 sm:px-12 lg:px-36">
+        <a
+          className="btn"
+          href="https://twitter.com/cornerstone_jsx"
+          rel="noreferrer"
+          target="_blank"
+          id="twitter"
+        >
+          <p className="link__text">Twitter Link</p>
+        </a>
 
-        <div className="btn">
-          <a
-            href="https://training.zuri.team/"
-            rel="noreferrer"
-            target="_blank"
-            className="link__text"
-            id="btn__zuri"
-          >
-            Zuri Team
-          </a>
-        </div>
-        <div className="btn">
-          <a
-            href="http://books.zuri.team/"
-            rel="noreferrer"
-            target="_blank"
-            className="link__text"
-            id="books"
-          >
-            Zuri Books
-          </a>
-        </div>
-        <div className="btn">
-          <a
-            href="https://books.zuri.team/python-for-beginners?ref_id=cornerstone"
-            rel="noreferrer"
-            target="_blank"
-            className="link__text"
-            id="book__python"
-          >
-            Python Books
-          </a>
-        </div>
-        <div className="btn">
-          <a
-            href="https://background.zuri.team/"
-            rel="noreferrer"
-            target="_blank"
-            className="link__text"
-            id="pitch"
-          >
-            Background Check for Codes
-          </a>
-        </div>
-        <div className="btn">
-          <a
-            href="https://books.zuri.team/design-rules"
-            rel="noreferrer"
-            target="_blank"
-            className="link__text"
-            id="book_design"
-          >
-            Design Books
-          </a>
-        </div>
+        <a
+          className="btn"
+          href="https://training.zuri.team/"
+          rel="noreferrer"
+          target="_blank"
+          id="btn__zuri"
+        >
+          <p className="link__text">Zuri Team</p>
+        </a>
+        <a
+          className="btn"
+          href="http://books.zuri.team/"
+          rel="noreferrer"
+          target="_blank"
+          id="books"
+        >
+          <p className="link__text">Zuri Books</p>
+        </a>
+        <a
+          className="btn"
+          href="https://books.zuri.team/python-for-beginners?ref_id=cornerstone"
+          rel="noreferrer"
+          target="_blank"
+          id="book__python"
+        >
+          <p className="link__text">Python Books</p>
+        </a>
+        <a
+          className="btn"
+          href="https://background.zuri.team/"
+          rel="noreferrer"
+          target="_blank"
+          id="pitch"
+        >
+          <p className="link__text">Background Check for Codes</p>
+        </a>
+        <a
+          className="btn"
+          href="https://books.zuri.team/design-rules"
+          rel="noreferrer"
+          target="_blank"
+          id="book_design"
+        >
+          <p className="link__text">Design Books</p>
+        </a>
 
         <div className="social py-6 flex justify-center items-center gap-6">
           <a href="/">
@@ -94,6 +82,15 @@ const App = () => {
           </a>
         </div>
       </div>
+      <footer className="w-full py-12 px-4 sm:px-12 lg:px-28 flex justify-center items-center">
+        <div className="m-auto w-full max-w-custom flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-6 border-t-1 border-zuriGray-200 pt-6">
+          <img src={Logo} alt="ingressive_for_good" />
+          <p className="text-zuriGray-500 text-base font-default font-normal">
+            HNG Internship 9 Frontend Task
+          </p>
+          <img src={I4G} alt="zuri_internship" />
+        </div>
+      </footer>
     </div>
   );
 };

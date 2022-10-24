@@ -561,6 +561,10 @@ video {
   position: relative;
 }
 
+.m-auto{
+  margin: auto;
+}
+
 .mt-16{
   margin-top: 4rem;
 }
@@ -575,6 +579,10 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.max-w-custom{
+  max-width: 1216px;
 }
 
 .flex-col{
@@ -601,6 +609,15 @@ video {
   gap: 1.5rem;
 }
 
+.border-t-1{
+  border-top-width: 1px;
+}
+
+.border-zuriGray-200{
+  --tw-border-opacity: 1;
+  border-color: rgb(234 236 240 / var(--tw-border-opacity));
+}
+
 .bg-zuriBg{
   --tw-bg-opacity: 1;
   background-color: rgb(244 245 247 / var(--tw-bg-opacity));
@@ -616,6 +633,15 @@ video {
   padding-bottom: 1.5rem;
 }
 
+.py-12{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
+}
+
 .font-default{
   font-family: Montserrat;
 }
@@ -625,13 +651,27 @@ video {
   line-height: 1.75rem;
 }
 
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .font-bold{
   font-weight: 700;
+}
+
+.font-normal{
+  font-weight: 400;
 }
 
 .text-zuriGray-900{
   --tw-text-opacity: 1;
   color: rgb(16 24 40 / var(--tw-text-opacity));
+}
+
+.text-zuriGray-500{
+  --tw-text-opacity: 1;
+  color: rgb(102 112 133 / var(--tw-text-opacity));
 }
 
 .btn{
@@ -651,6 +691,14 @@ video {
   padding-bottom: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+  transition-property: all;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 213 221 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px){
@@ -674,19 +722,32 @@ video {
     line-height: 1.75rem;
   }
 
+  .sm\:flex-row{
+    flex-direction: row;
+  }
+
+  .sm\:justify-between{
+    justify-content: space-between;
+  }
+
   .sm\:gap-14{
     gap: 3.5rem;
   }
 
-  .sm\:px-20{
-    padding-left: 5rem;
-    padding-right: 5rem;
+  .sm\:px-12{
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 
-@media (min-width: 768px){
-  .md\:px-36{
+@media (min-width: 1024px){
+  .lg\:px-36{
     padding-left: 9rem;
     padding-right: 9rem;
+  }
+
+  .lg\:px-28{
+    padding-left: 7rem;
+    padding-right: 7rem;
   }
 }
