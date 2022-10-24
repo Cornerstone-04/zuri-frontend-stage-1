@@ -1,11 +1,11 @@
 import React from "react";
-import { Github, I4G, Logo, ProfilePic, Slack } from "./assets";
+import { Github, I4G, Logo, ProfilePic, Slack, Share } from "./assets";
 
 const App = () => {
   return (
     <div className="bg-zuriBg min-h-screen flex flex-col justify-start items-center gap-8 sm:gap-14 relative">
       {/* profile */}
-      <div className="mt-16 flex flex-col justify-center items-center gap-6">
+      <div className="mt-16 w-full flex flex-col justify-center items-center gap-6">
         <img src={ProfilePic} alt="" id="profile__img" />
         <p className="font-bold text-zuriGray-900 text-xl font-default">
           Annette Black
@@ -14,7 +14,9 @@ const App = () => {
           <p id="slack">Ephraim Cornerstone</p>
         </noscript>
       </div>
-
+      <div className="bg-white hover:bg-zuriGray-50 absolute top-12 right-4 sm:right-12 md:right-36 w-10 h-10 flex justify-center items-center rounded-full border-2 border-dashed border-zuriGray-300 cursor-pointer">
+        <img src={Share} alt="" />
+      </div>
       {/* link boxes */}
       <div className="flex flex-col justify-center items-center gap-6 w-full px-4 sm:px-12 lg:px-36">
         <a
