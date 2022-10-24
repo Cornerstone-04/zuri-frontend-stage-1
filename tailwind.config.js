@@ -17,6 +17,7 @@ module.exports = {
         default: ["Montserrat"],
       },
       height: { box: "76px", boxSm: "76px" },
+      borderWidth: {1: "1px"}
     },
   },
   plugins: [],
