@@ -9,6 +9,7 @@ import {
   Menu,
   Camera,
 } from "../assets";
+import Footer from "../components/Footer";
 
 const Links = () => {
   return (
@@ -42,7 +43,7 @@ const Links = () => {
       </div>
 
       {/* link boxes */}
-      <div className="flex flex-col justify-center items-center gap-6 w-full px-4 sm:px-12 lg:px-36">
+      <div className="flex flex-col justify-center items-center gap-6 w-full px-4 sm:px-12 lg:px-36 pb-40">
         <a
           className="btn link__text"
           href="https://twitter.com/cornerstone_jsx"
@@ -108,15 +109,7 @@ const Links = () => {
           </a>
         </div>
       </div>
-      <footer className="w-full py-12 px-4 sm:px-12 lg:px-28 flex justify-center items-center">
-        <div className="m-auto w-full max-w-custom flex flex-col sm:flex-row justify-center sm:justify-between items-center gap-6 border-t-1 border-zuriGray-200 pt-6">
-          <img src={Logo} alt="ingressive_for_good" />
-          <p className="text-zuriGray-500 text-base font-default font-normal text-center">
-            HNG Internship 9 Frontend Task
-          </p>
-          <img src={I4G} alt="zuri_internship" />
-        </div>
-      </footer>
+      <Footer/>
     </div>
   );
 };
