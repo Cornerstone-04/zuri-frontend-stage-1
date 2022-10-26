@@ -1,13 +1,25 @@
 import React from "react";
-import { Github, I4G, Logo, Slack, Share, Profile, Menu } from "../assets";
+import {
+  Github,
+  I4G,
+  Logo,
+  Slack,
+  Share,
+  Profile,
+  Menu,
+  Camera,
+} from "../assets";
 
 const Links = () => {
   return (
     <div className="bg-zuriBg min-h-screen flex flex-col justify-start items-center gap-8 sm:gap-14 relative">
       {/* profile */}
       <div className="mt-16 w-full flex flex-col justify-center items-center gap-6">
-        <div className="h-img w-img rounded-full overflow-hidden">
+        <div className="h-img w-img rounded-full overflow-hidden relative">
           <img src={Profile} alt="" id="profile__img" className="max-w-full" />
+          <div className="absolute top-0 left-0 w-full h-full bg-clear flex flex-col justify-end items-center opacity-0 hover:opacity-100 transition ease-linear z-10">
+            <img src={Camera} alt="" className="w-6 mb-2.5" />
+          </div>
         </div>
         <p
           className="font-bold text-zuriGray-900 text-xl font-default"

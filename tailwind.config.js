@@ -24,6 +24,7 @@ module.exports = {
           800: "#1D2939",
           900: "#101828",
         },
+        clear: "#344054BF",
       },
       fontFamily: {
         default: ["Montserrat"],
