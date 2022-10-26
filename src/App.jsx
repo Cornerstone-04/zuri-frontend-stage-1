@@ -7,8 +7,7 @@ const App = () => {
       {/* profile */}
       <div className="mt-16 w-full flex flex-col justify-center items-center gap-6">
         <div className="h-img w-img rounded-full overflow-hidden">
-
-        <img src={Profile} alt="" id="profile__img" className="max-w-full" />
+          <img src={Profile} alt="" id="profile__img" className="max-w-full" />
         </div>
         <p
           className="font-bold text-zuriGray-900 text-xl font-default"
@@ -27,59 +26,59 @@ const App = () => {
       {/* link boxes */}
       <div className="flex flex-col justify-center items-center gap-6 w-full px-4 sm:px-12 lg:px-36">
         <a
-          className="btn"
+          className="btn link__text"
           href="https://twitter.com/cornerstone_jsx"
           rel="noreferrer"
           target="_blank"
           id="twitter"
         >
-          <p className="link__text">Twitter Link</p>
+          Twitter Link
         </a>
 
         <a
-          className="btn"
+          className="btn link__text"
           href="https://training.zuri.team/"
           rel="noreferrer"
           target="_blank"
           id="btn__zuri"
         >
-          <p className="link__text">Zuri Team</p>
+          Zuri team
         </a>
         <a
-          className="btn"
+          className="btn link__text"
           href="http://books.zuri.team/"
           rel="noreferrer"
           target="_blank"
           id="books"
         >
-          <p className="link__text">Zuri Books</p>
+          Zuri Books
         </a>
         <a
-          className="btn"
+          className="btn link__text"
           href="https://books.zuri.team/python-for-beginners?ref_id=cornerstone"
           rel="noreferrer"
           target="_blank"
           id="book__python"
         >
-          <p className="link__text">Python Books</p>
+          Python Books
         </a>
         <a
-          className="btn"
+          className="btn link__text"
           href="https://background.zuri.team/"
           rel="noreferrer"
           target="_blank"
           id="pitch"
         >
-          <p className="link__text">Background Check for Codes</p>
+          Background Check for Codes
         </a>
         <a
-          className="btn"
+          className="btn link__text"
           href="https://books.zuri.team/design-rules"
           rel="noreferrer"
           target="_blank"
           id="book_design"
         >
-          <p className="link__text">Design Books</p>
+          Design Books
         </a>
 
         <div className="social py-6 flex justify-center items-center gap-6">
