@@ -1,14 +1,5 @@
 import React from "react";
-import {
-  Github,
-  I4G,
-  Logo,
-  Slack,
-  Share,
-  Profile,
-  Menu,
-  Camera,
-} from "../assets";
+import { Github, Slack, Share, Profile, Menu, Camera } from "../assets";
 import Footer from "../components/Footer";
 
 const Links = () => {
@@ -100,7 +91,7 @@ const Links = () => {
           Design Books
         </a>
 
-        <div className="social py-6 flex justify-center items-center gap-6">
+        <div className="social pt-6 pb-20 sm:pb-6 flex justify-center items-center gap-6">
           <a href="/">
             <img src={Slack} alt="" />
           </a>
@@ -109,7 +100,7 @@ const Links = () => {
           </a>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
