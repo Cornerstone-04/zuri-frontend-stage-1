@@ -55,17 +55,18 @@ const Links = () => {
           Zuri team
         </a>
         <a
-          className="btn link__text"
+          className="btn link__text flex flex-col justify-center items-center"
           href="http://books.zuri.team/"
           rel="noreferrer"
           target="_blank"
           id="books"
+          title="Find books about design and coding."
         >
           Zuri Books
         </a>
         <a
           className="btn link__text"
-          href="https://books.zuri.team/python-for-beginners?ref_id=cornerstone"
+          href="https://books.zuri.team/python-for-beginners?ref_id=cornerstone_ephraim"
           rel="noreferrer"
           target="_blank"
           id="book__python"
@@ -78,6 +79,7 @@ const Links = () => {
           rel="noreferrer"
           target="_blank"
           id="pitch"
+          title="Perform a background check on coders."
         >
           Background Check for Codes
         </a>
@@ -86,7 +88,8 @@ const Links = () => {
           href="https://books.zuri.team/design-rules"
           rel="noreferrer"
           target="_blank"
-          id="book_design"
+          id="book__design"
+          title="Free design book by Zuri."
         >
           Design Books
         </a>
