@@ -53,6 +53,9 @@ module.exports = {
       width: { box: "76px", boxSm: "76px", img: "88px", tip: "185px" },
       borderWidth: { 1: "1px" },
       maxWidth: { custom: "1216px", form: "720px" },
+      margin:{
+        btn: "300px"
+      }
     },
   },
   plugins: [],
