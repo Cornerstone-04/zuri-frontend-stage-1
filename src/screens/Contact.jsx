@@ -53,7 +53,7 @@ const Contact = () => {
                 name="first_name"
                 id="first_name"
                 placeholder="Enter your first name"
-                className="bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+                className="input_area"
                 value={user.firstName}
                 onChange={(e) => {
                   setUser({ ...user, firstName: e.target.value });
@@ -72,7 +72,7 @@ const Contact = () => {
                 name="last_name"
                 id="last_name"
                 placeholder="Enter your last name"
-                className="bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+                className="input_area"
                 value={user.lastName}
                 onChange={(e) => {
                   setUser({ ...user, lastName: e.target.value });
@@ -92,7 +92,7 @@ const Contact = () => {
               name="email"
               id="email"
               placeholder="yourname@gmail.com"
-              className="bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+              className="input_area"
               value={user.email}
               onChange={(e) => {
                 setUser({ ...user, email: e.target.value });
@@ -112,7 +112,7 @@ const Contact = () => {
               cols="30"
               rows="10"
               placeholder="Send me a message and I'll reply you as soon as possible"
-              className="bg-white h-text border border-zuriGray-300 rounded-lg resize-none py-2.5 px-3 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+              className="message"
               value={user.message}
               onChange={(e) => {
                 setUser({ ...user, message: e.target.value });
@@ -133,7 +133,7 @@ const Contact = () => {
           <button
             id="btn_submit"
             disabled={isDisabled}
-            className="bg-primary-600 h-12 rounded-lg flex justify-center items-center py-3 font-medium text-base text-white mt-2 mb-48"
+            className="bg-primary-600 h-12 w-full rounded-lg flex justify-center items-center py-3 font-medium text-base text-white mt-2 mb-48"
           >
             Send Message
           </button>
