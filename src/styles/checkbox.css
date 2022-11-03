@@ -3,13 +3,12 @@
   top: 1px;
   width: 20px;
   height: 20px;
-  border:1px solid #1570EF;
+  border: 1px solid #1570ef;
   border-radius: 6px;
   cursor: pointer;
   display: block;
   transition: all 0.1s linear;
   background-color: transparent;
-
 }
 .checkbox::after {
   content: "";
@@ -19,10 +18,10 @@
   width: 6px;
   height: 11px;
   opacity: 0;
-  transform: rotate(50deg) scale(0) translate(100%, -30%) ;
+  transform: rotate(50deg) scale(0) translate(100%, -30%);
   border-right: 2px solid #1570ef;
   border-top-right-radius: 1px;
-  border-bottom-left-radius: 1px; 
+  border-bottom-left-radius: 1px;
   border-end-end-radius: 2px;
   border-bottom: 2px solid #1570ef;
   transition: all 0.3s linear;
@@ -30,7 +29,11 @@
 
 #checkbox:checked ~ .checkbox::after {
   opacity: 1 !important;
-  transform: rotate(50deg) scale(1)  translate(100%, -30%) !important;
+  transform: rotate(50deg) scale(1) translate(100%, -30%) !important;
+}
+
+#checkbox:checked ~ .checkbox {
+  box-shadow: 0px 0px 0px 4px #d1e9ff;
 }
 
 .hidden {

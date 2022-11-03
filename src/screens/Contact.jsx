@@ -12,16 +12,25 @@ const Contact = () => {
 
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [complete, setComplete] = useState(false)
 
   const toggleClick = () => {
     setIsChecked(!isChecked);
   };
 
+  const handleSubmit = (e)=>{
+    e.preventDefault();
+    if(isChecked && user.email){
+        // do something
+    } else{
+        // do another thing
+    }
+  }
+
   useEffect(() => {
     if (isChecked) {
       setIsDisabled(false);
-    }
-    return () => {
+    }else{
       setIsDisabled(true);
     };
   }, [isChecked]);
@@ -39,7 +48,7 @@ const Contact = () => {
         </header>
 
         {/* contact form */}
-        <form className="w-full max-w-form flex flex-col gap-6">
+        <form className="w-full max-w-form flex flex-col gap-6" onSubmit={handleSubmit}>
           <section className="flex flex-col md:flex-row gap-6 w-full">
             <div className="flex flex-col gap-1.5 basis-2/4">
               <label
@@ -120,7 +129,7 @@ const Contact = () => {
             ></textarea>
           </section>
           <section className="flex gap-3 items-start md:items-center">
-            <Checkbox onClick={toggleClick} />
+            <Checkbox onChange={toggleClick} />
             <label
               htmlFor="checkbox"
               className="font-normal text-sm text-zuriGray-600"
@@ -133,7 +142,7 @@ const Contact = () => {
           <button
             id="btn_submit"
             disabled={isDisabled}
-            className="bg-primary-600 h-12 w-full rounded-lg flex justify-center items-center py-3 font-medium text-base text-white mt-2 mb-btn md:mb-48 cursor-pointer"
+            className="bg-primary-600 h-12 w-full outline-none   rounded-lg flex justify-center items-center py-3 font-medium text-base text-white mt-2 mb-btn md:mb-48 cursor-pointer disabled:bg-primary-200 focus:shadow-btn"
           >
             Send Message
           </button>
