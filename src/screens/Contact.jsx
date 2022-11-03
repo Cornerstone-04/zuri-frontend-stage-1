@@ -3,6 +3,13 @@ import Checkbox from "../components/Checkbox";
 import Footer from "../components/Footer";
 
 const Contact = () => {
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    message: "",
+  });
+
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -47,6 +54,10 @@ const Contact = () => {
                 id="first_name"
                 placeholder="Enter your first name"
                 className="bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+                value={user.firstName}
+                onChange={(e) => {
+                  setUser({ ...user, firstName: e.target.value });
+                }}
               />
             </div>
             <div className="flex flex-col gap-1.5 basis-2/4">
@@ -62,6 +73,10 @@ const Contact = () => {
                 id="last_name"
                 placeholder="Enter your last name"
                 className="bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+                value={user.lastName}
+                onChange={(e) => {
+                  setUser({ ...user, lastName: e.target.value });
+                }}
               />
             </div>
           </section>
@@ -78,6 +93,10 @@ const Contact = () => {
               id="email"
               placeholder="yourname@gmail.com"
               className="bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+              value={user.email}
+              onChange={(e) => {
+                setUser({ ...user, email: e.target.value });
+              }}
             />
           </section>
           <section className="flex flex-col gap-1.5">
@@ -94,6 +113,10 @@ const Contact = () => {
               rows="10"
               placeholder="Send me a message and I'll reply you as soon as possible"
               className="bg-white h-text border border-zuriGray-300 rounded-lg resize-none py-2.5 px-3 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear"
+              value={user.message}
+              onChange={(e) => {
+                setUser({ ...user, message: e.target.value });
+              }}
             ></textarea>
           </section>
           <section className="flex gap-3 items-center">
