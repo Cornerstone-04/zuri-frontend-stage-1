@@ -1,9 +1,24 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
+import Checkbox from "../components/Checkbox";
 
 const Contact = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+
+  const toggleClick = () => {
+    setIsChecked(!isChecked);
+  };
+
+  useEffect(() => {
+    if (isChecked) {
+      setIsDisabled(false);
+    }
+    return () => {
+      setIsDisabled(true);
+    };
+  }, [isChecked]);
 
   return (
     <div>
@@ -33,13 +48,13 @@ const Contact = () => {
           <textarea name="message" id="message" cols="30" rows="10"></textarea>
         </section>
         <section>
-          <input type="checkbox" name="check_box" id="check_box" />
-          <label htmlFor="check_box">
+          <Checkbox onClick={toggleClick} />
+          <label htmlFor="checkbox">
             You agree to providing your data to Cornerstone who may contact you.
           </label>
         </section>
 
-        <button>Send Message</button>
+        <button disabled={isDisabled}>Send Message</button>
       </form>
     </div>
   );
