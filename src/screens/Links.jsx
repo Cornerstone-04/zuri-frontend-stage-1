@@ -93,6 +93,14 @@ const Links = () => {
         >
           Design Books
         </a>
+        <a
+          className="btn link__text"
+          href="/contact"
+          id="contact"
+          title="Free design book by Zuri."
+        >
+          Contact Me
+        </a>
 
         <div className="social pt-6 pb-32 sm:pb-6 flex justify-center items-center gap-6">
           <a href="/">

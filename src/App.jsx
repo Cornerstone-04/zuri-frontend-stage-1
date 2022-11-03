@@ -1,10 +1,11 @@
 import React from "react";
-import Links from "./screens/Links";
+import AppRoutes from "./routes/Router";
+
 
 const App = () => {
   return (
     <div className="min-h-screen w-full">
-      <Links />
+      <AppRoutes/>
     </div>
   );
 };
