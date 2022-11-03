@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const Links = () => {
   return (
-    <div className="bg-zuriBg min-h-screen flex flex-col justify-start items-center gap-8 sm:gap-14 relative">
+    <div className="bg-zuriBg min-h-screen flex flex-col justify-start items-center gap-8 sm:gap-14 relative font-contact">
       {/* profile */}
       <div className="mt-16 w-full flex flex-col justify-center items-center gap-6">
         <div className="h-img w-img rounded-full overflow-hidden relative">
@@ -14,7 +14,7 @@ const Links = () => {
           </div>
         </div>
         <p
-          className="font-bold text-zuriGray-900 text-xl font-default"
+          className="font-bold text-zuriGray-900 text-xl "
           title="twitter handle"
           id="twitter"
         >
@@ -102,7 +102,7 @@ const Links = () => {
           Contact Me
         </a>
 
-        <div className="social pt-6 pb-32 sm:pb-6 flex justify-center items-center gap-6">
+        <div className="social pt-6 mb-32 sm:mb-6 flex justify-center items-center gap-6">
           <a href="/">
             <img src={Slack} alt="" />
           </a>
