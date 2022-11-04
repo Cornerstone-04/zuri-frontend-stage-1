@@ -15,7 +15,7 @@
     <br>JavaScript
     </td>
   <td align="Center" width="333px">
-      <a href="https://sass-lang.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="50" height="50" alt="tailwind" /></a>
+      <a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg" width="50" height="50" alt="tailwind" /></a>
     <br>Tailwind
     </td>
   </tr>
