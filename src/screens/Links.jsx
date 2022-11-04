@@ -1,8 +1,11 @@
 import React from "react";
 import { Github, Slack, Share, Profile, Menu, Camera } from "../assets";
-import Footer from "../components/Footer";
+import { Footer } from "../components";
+import { TabTitle } from "../utils/General";
 
 const Links = () => {
+  TabTitle("Zuri Linktree | Links");
+
   return (
     <div className="bg-zuriBg min-h-screen flex flex-col justify-start items-center gap-8 sm:gap-14 relative font-contact">
       {/* profile */}

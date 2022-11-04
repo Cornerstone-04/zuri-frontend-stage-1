@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import Checkbox from "../components/Checkbox";
-import Footer from "../components/Footer";
+import { Footer, Checkbox } from "../components";
+import { TabTitle } from "../utils/General";
 
 const Contact = () => {
+  TabTitle("Contact Page");
+
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
