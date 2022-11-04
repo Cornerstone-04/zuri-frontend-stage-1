@@ -84,7 +84,7 @@ const Links = () => {
           id="pitch"
           title="Perform a background check on coders."
         >
-          Background Check for Codes
+          Background Check for Coders
         </a>
         <a
           className="btn link__text"
