@@ -15,6 +15,7 @@ const Contact = () => {
 
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [complete, setComplete] = useState(true);
 
   const toggleClick = () => {
     setIsChecked(!isChecked);
@@ -32,8 +33,9 @@ const Contact = () => {
       user.email.includes(".")
     ) {
       toast.success("Submitted!");
+      setComplete(true);
     } else {
-      toast.error("Please fill all inputs!");
+      setComplete(false);
     }
   };
 
@@ -44,6 +46,20 @@ const Contact = () => {
       setIsDisabled(true);
     }
   }, [isChecked]);
+
+  useEffect(() => {
+    if (
+      isChecked ||
+      user.message ||
+      user.firstName ||
+      user.lastName ||
+      user.email ||
+      user.email.includes("@") ||
+      user.email.includes(".")
+    ) {
+      setComplete(true);
+    }
+  }, [isChecked, user.email, user.firstName, user.lastName, user.message]);
 
   return (
     <div className="bg-zuriBg min-h-screen w-full flex flex-col justify-start  items-center sm:gap-14 relative font-contact">
@@ -87,13 +103,21 @@ const Contact = () => {
                 name="first_name"
                 id="first_name"
                 placeholder="Enter your first name"
-                // className={user.firstName ? "input_area" : "input_error"}
-                className="input_area"
+                className={
+                  complete || user.firstName ? "input_area" : "input_error"
+                }
                 value={user.firstName}
                 onChange={(e) => {
                   setUser({ ...user, firstName: e.target.value });
                 }}
               />
+              {!complete && !user.firstName ? (
+                <label className="text-sm font-medium text-danger-100 transition-all ease-linear">
+                  Please enter a message
+                </label>
+              ) : (
+                ""
+              )}
             </div>
             <div className="flex flex-col gap-1.5 basis-2/4">
               <label
@@ -107,13 +131,21 @@ const Contact = () => {
                 name="last_name"
                 id="last_name"
                 placeholder="Enter your last name"
-                // className={user.lastName ? "input_area" : "input_error"}
-                className="input_area"
+                className={
+                  complete || user.lastName ? "input_area" : "input_error"
+                }
                 value={user.lastName}
                 onChange={(e) => {
                   setUser({ ...user, lastName: e.target.value });
                 }}
               />
+              {!complete && !user.lastName ? (
+                <label className="text-sm font-medium text-danger-100 transition-all ease-linear">
+                  Please enter your last name
+                </label>
+              ) : (
+                ""
+              )}
             </div>
           </section>
           <section className="flex flex-col gap-1.5">
@@ -128,13 +160,19 @@ const Contact = () => {
               name="email"
               id="email"
               placeholder="yourname@gmail.com"
-              // className={user.email ? "input_area" : "input_error"}
-              className="input_area"
+              className={complete || user.email ? "input_area" : "input_error"}
               value={user.email}
               onChange={(e) => {
                 setUser({ ...user, email: e.target.value });
               }}
             />
+            {!complete && !user.email ? (
+              <label className="text-sm font-medium text-danger-100 transition-all ease-linear">
+                Please enter a valid email
+              </label>
+            ) : (
+              ""
+            )}
           </section>
           <section className="flex flex-col gap-1.5">
             <label
@@ -149,16 +187,18 @@ const Contact = () => {
               cols="30"
               rows="10"
               placeholder="Send me a message and I'll reply you as soon as possible"
-              className={user.message ? "message" : "message_error"}
+              className={complete || user.message ? "message" : "message_error"}
               value={user.message}
               onChange={(e) => {
                 setUser({ ...user, message: e.target.value });
               }}
             ></textarea>
-            {!user.message && (
+            {!complete && !user.message ? (
               <label className="text-sm font-medium text-danger-100 transition-all ease-linear">
                 Please enter a message
               </label>
+            ) : (
+              ""
             )}
           </section>
           <section className="flex gap-3 items-start md:items-center">
