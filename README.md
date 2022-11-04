@@ -74,7 +74,7 @@ Before installation, please make sure you have already installed the following t
 
 ## 🎨 Demo
 
-Check out the website: [TextMi](https://zuri-linktree.vercel.app/)
+Check out the website: [Zuri Linktree](https://zuri-linktree.vercel.app/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
