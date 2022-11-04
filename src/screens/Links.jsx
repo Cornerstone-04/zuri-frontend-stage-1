@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Github, Slack, Share, Profile, Menu, Camera } from "../assets";
 import { Footer } from "../components";
 import { TabTitle } from "../utils/General";
@@ -38,80 +39,80 @@ const Links = () => {
 
       {/* link boxes */}
       <div className="flex flex-col justify-center items-center gap-6 w-full px-4 sm:px-12 lg:px-36 pb-40">
-        <a
+        <Link
           className="btn link__text"
-          href="https://twitter.com/cornerstone_jsx"
+          to="https://twitter.com/cornerstone_jsx"
           rel="noreferrer"
           target="_blank"
           id="twitter"
         >
           Twitter Link
-        </a>
+        </Link>
 
-        <a
+        <Link
           className="btn link__text"
-          href="https://training.zuri.team/"
+          to="https://training.zuri.team/"
           rel="noreferrer"
           target="_blank"
           id="btn__zuri"
         >
           Zuri team
-        </a>
-        <a
+        </Link>
+        <Link
           className="btn link__text flex flex-col justify-center items-center"
-          href="http://books.zuri.team/"
+          to="http://books.zuri.team/"
           rel="noreferrer"
           target="_blank"
           id="books"
           title="Find books about design and coding."
         >
           Zuri Books
-        </a>
-        <a
+        </Link>
+        <Link
           className="btn link__text"
-          href="https://books.zuri.team/python-for-beginners?ref_id=cornerstone_ephraim"
+          to="https://books.zuri.team/python-for-beginners?ref_id=cornerstone_ephraim"
           rel="noreferrer"
           target="_blank"
           id="book__python"
         >
           Python Books
-        </a>
-        <a
+        </Link>
+        <Link
           className="btn link__text"
-          href="https://background.zuri.team/"
+          to="https://background.zuri.team/"
           rel="noreferrer"
           target="_blank"
           id="pitch"
           title="Perform a background check on coders."
         >
           Background Check for Coders
-        </a>
-        <a
+        </Link>
+        <Link
           className="btn link__text"
-          href="https://books.zuri.team/design-rules"
+          to="https://books.zuri.team/design-rules"
           rel="noreferrer"
           target="_blank"
           id="book__design"
           title="Free design book by Zuri."
         >
           Design Books
-        </a>
-        <a
+        </Link>
+        <Link
           className="btn link__text"
-          href="/contact"
+          to="/contact"
           id="contact"
           title="Free design book by Zuri."
         >
           Contact Me
-        </a>
+        </Link>
 
         <div className="social pt-6 mb-32 sm:mb-6 flex justify-center items-center gap-6">
-          <a href="/">
+          <Link to="/">
             <img src={Slack} alt="" />
-          </a>
-          <a href="https://github.com/Cornerstone-04">
+          </Link>
+          <Link to="https://github.com/Cornerstone-04">
             <img src={Github} alt="" />
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />
