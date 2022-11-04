@@ -14,8 +14,18 @@
 }
 
 .message {
-  @apply bg-white h-text border border-zuriGray-300 rounded-lg resize-none py-2.5 px-3 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear;
+  @apply bg-white h-text border border-zuriGray-300 rounded-lg resize-none py-2.5 px-3 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear focus:shadow-btn focus:border-primary-300 transition-all ease-linear;
 }
+/* text field validation error */
+.message_error {
+  @apply bg-white h-text border border-danger-50 rounded-lg resize-none py-2.5 px-3 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear focus:shadow-text transition-all ease-linear;
+}
+
 .input_area {
-  @apply bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear;
+  @apply bg-white h-input border border-zuriGray-300 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear focus:shadow-btn focus:border-primary-300 transition-all ease-linear;
+}
+
+/* input field validation error */
+.input_error {
+  @apply bg-white h-input border border-danger-50 rounded-lg py-2.5 px-3.5 outline-none text-base placeholder:text-zuriGray-500 text-zuriGray-900 focus:placeholder:text-zuriGray-900 placeholder:transition  placeholder:ease-linear focus:shadow-text transition-all ease-linear;
 }

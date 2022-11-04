@@ -37,6 +37,10 @@ module.exports = {
           800: "#1849A9",
           900: "#194185",
         },
+        danger: {
+          50: "#F89687",
+          100: "#F83F23",
+        },
         clear: "#344054BF",
       },
       fontFamily: {
@@ -59,6 +63,7 @@ module.exports = {
       boxShadow: {
         in: " 0px 0px 0px 4px #D1E9FF",
         btn: "0px 1px 2px #1018280d, 0px 0px 0px 4px #D1E9FF",
+        text: "0px 1px 2px #1018280d, 0px 0px 0px 4px #FFD3CC",
       },
     },
   },

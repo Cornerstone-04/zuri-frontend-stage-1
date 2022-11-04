@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import Checkbox from "../components/Checkbox";
 import Footer from "../components/Footer";
 
@@ -12,31 +13,50 @@ const Contact = () => {
 
   const [isChecked, setIsChecked] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
-  const [complete, setComplete] = useState(false)
 
   const toggleClick = () => {
     setIsChecked(!isChecked);
   };
 
-  const handleSubmit = (e)=>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if(isChecked && user.email){
-        // do something
-    } else{
-        // do another thing
+    if (
+      isChecked &&
+      user.message &&
+      user.firstName &&
+      user.lastName &&
+      user.email &&
+      user.email.includes("@") &&
+      user.email.includes(".")
+    ) {
+      toast.success("Submitted!");
+    } else {
+      toast.error("Please fill all inputs!");
     }
-  }
+  };
 
   useEffect(() => {
     if (isChecked) {
       setIsDisabled(false);
-    }else{
+    } else {
       setIsDisabled(true);
-    };
+    }
   }, [isChecked]);
 
   return (
     <div className="bg-zuriBg min-h-screen w-full flex flex-col justify-start  items-center sm:gap-14 relative font-contact">
+      <Toaster
+        position="top-center"
+        toastOptions={{
+          duration: 3500,
+          style: {
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "16px",
+          },
+        }}
+      />
       <main className="w-full px-4 md:px-20 pt-16 flex flex-col justify-center items-center gap-12">
         <header className="w-full max-w-form flex flex-col justify-start items-start gap-5">
           <h1 className="font-semibold text-zuriGray-900 text-4xl">
@@ -48,7 +68,10 @@ const Contact = () => {
         </header>
 
         {/* contact form */}
-        <form className="w-full max-w-form flex flex-col gap-6" onSubmit={handleSubmit}>
+        <form
+          className="w-full max-w-form flex flex-col gap-6"
+          onSubmit={handleSubmit}
+        >
           <section className="flex flex-col md:flex-row gap-6 w-full">
             <div className="flex flex-col gap-1.5 basis-2/4">
               <label
@@ -62,6 +85,7 @@ const Contact = () => {
                 name="first_name"
                 id="first_name"
                 placeholder="Enter your first name"
+                // className={user.firstName ? "input_area" : "input_error"}
                 className="input_area"
                 value={user.firstName}
                 onChange={(e) => {
@@ -81,6 +105,7 @@ const Contact = () => {
                 name="last_name"
                 id="last_name"
                 placeholder="Enter your last name"
+                // className={user.lastName ? "input_area" : "input_error"}
                 className="input_area"
                 value={user.lastName}
                 onChange={(e) => {
@@ -101,6 +126,7 @@ const Contact = () => {
               name="email"
               id="email"
               placeholder="yourname@gmail.com"
+              // className={user.email ? "input_area" : "input_error"}
               className="input_area"
               value={user.email}
               onChange={(e) => {
@@ -121,12 +147,17 @@ const Contact = () => {
               cols="30"
               rows="10"
               placeholder="Send me a message and I'll reply you as soon as possible"
-              className="message"
+              className={user.message ? "message" : "message_error"}
               value={user.message}
               onChange={(e) => {
                 setUser({ ...user, message: e.target.value });
               }}
             ></textarea>
+            {!user.message && (
+              <label className="text-sm font-medium text-danger-100 transition-all ease-linear">
+                Please enter a message
+              </label>
+            )}
           </section>
           <section className="flex gap-3 items-start md:items-center">
             <Checkbox onChange={toggleClick} />
