@@ -21,8 +21,10 @@
   </tr>
 </tbody>
   </table>
+  
 
 ### 🖼️ Screenshot
+![zuri-linktree vercel app_(Medion X58322)](https://user-images.githubusercontent.com/79138753/199942472-1dc895c1-dfd7-4bf8-b58f-e555e120abd9.png)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
