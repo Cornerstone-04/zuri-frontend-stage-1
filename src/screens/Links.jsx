@@ -97,12 +97,7 @@ const Links = () => {
         >
           Design Books
         </Link>
-        <Link
-          className="btn link__text"
-          to="/contact"
-          id="contact"
-          title="Free design book by Zuri."
-        >
+        <Link className="btn link__text" to="/contact" id="contact">
           Contact Me
         </Link>
 
