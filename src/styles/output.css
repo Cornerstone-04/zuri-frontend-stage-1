@@ -914,6 +914,18 @@ video {
   transition-duration: 150ms;
 }
 
+.delay-75{
+  transition-delay: 75ms;
+}
+
+.delay-300{
+  transition-delay: 300ms;
+}
+
+.delay-150{
+  transition-delay: 150ms;
+}
+
 .ease-linear{
   transition-timing-function: linear;
 }

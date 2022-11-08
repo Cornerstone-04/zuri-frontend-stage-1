@@ -215,7 +215,7 @@ const Contact = () => {
           <button
             id="btn_submit"
             disabled={isDisabled}
-            className="bg-primary-600 h-12 w-full outline-none   rounded-lg flex justify-center items-center py-3 font-medium text-base text-white mt-2 mb-btn md:mb-48 cursor-pointer disabled:bg-primary-200 focus:shadow-btn"
+            className="bg-primary-600 h-12 w-full outline-none transition ease-linear rounded-lg flex justify-center items-center py-3 font-medium text-base text-white mt-2 mb-btn md:mb-48 cursor-pointer disabled:bg-primary-200 focus:shadow-btn"
           >
             Send Message
           </button>
